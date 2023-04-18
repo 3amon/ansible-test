@@ -1,8 +1,9 @@
  - name: Playbook to install NGINX
    hosts: all
    become: true
+   become_method: sudo
    tasks: 
-    - name: Ansible sudo apt install nginx
+    - name: Ansible apt install nginx
       apt:
         name: nginx
         state: present

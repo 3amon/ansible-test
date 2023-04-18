@@ -1,12 +1,8 @@
----
  - name: Playbook to install NGINX
-   connection: ansible.netcommon.network_cli
-   gather_facts: false
    hosts: all
+   become: true
    tasks: 
     - name: Ansible apt install nginx
       apt:
         name: nginx
         state: present
-
-

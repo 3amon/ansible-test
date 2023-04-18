@@ -2,7 +2,7 @@
    hosts: all
    become: true
    tasks: 
-    - name: Ansible apt install nginx
+    - name: Ansible sudo apt install nginx
       apt:
         name: nginx
         state: present

@@ -10,7 +10,7 @@
   - name: Ensure ansible user accepts the SSH key 
     authorized_key: 
       user: ansible 
-      key: https://github.com/3amon/ansible-test/blob/main/ansible.pub
+      key: https://raw.githubusercontent.com/3amon/ansible-test/main/ansible.pub
    state: present 
   - name: Ensure the ansible user is sudoer with no password required 
     lineinfile: 

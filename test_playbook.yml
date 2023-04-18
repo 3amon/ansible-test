@@ -1,15 +1,9 @@
 ---
-
-- name: Network Getting Started First Playbook
-  connection: ansible.netcommon.network_cli
-  gather_facts: false
-  hosts: all
-  tasks:
-
-    - name: Get config for VyOS devices
-      vyos.vyos.vyos_facts:
-        gather_subset: all
-
-    - name: Display the config
-      debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+ - name: Playbook to install NGINX
+   hosts: webservers
+   become: true
+   tasks: 
+    - name: Ansible apt install nginx
+      apt:
+        name: nginx
+        state: present

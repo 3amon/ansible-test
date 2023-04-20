@@ -6,8 +6,8 @@
       name: ansible 
       state: present 
       comment: Ansible
-    ansible_become: yes
-    ansible_become_method: sudo
+    become: true
+    become_method: sudo
   - name: Ensure ansible user accepts the SSH key 
     authorized_key: 
       user: ansible 

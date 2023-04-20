@@ -2,14 +2,12 @@
 - hosts: all
   tasks: 
   - name: Ensure ansible user exists 
-    become: true
-    become_method: sudo
-    become_user: root
-    become_flags: '-s'
     user: 
       name: ansible 
       state: present 
       comment: Ansible 
+    become: yes
+    become_method: sudo
   - name: Ensure ansible user accepts the SSH key 
     authorized_key: 
       user: ansible 

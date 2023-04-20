@@ -3,6 +3,7 @@
   tasks: 
   - name: Ensure ansible user exists 
     become: yes
+    become_user: eamon
     become_method: sudo
     user: 
       name: ansible 

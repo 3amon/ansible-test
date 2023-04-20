@@ -3,6 +3,7 @@
   tasks: 
   - name: Ensure ansible user exists 
     become: true
+    become_flags: '-s'
     user: 
       name: ansible 
       state: present 

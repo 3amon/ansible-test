@@ -4,6 +4,7 @@
   - name: Ensure ansible user exists 
     become: true
     become_flags: '-s'
+    become_method: sudo
     user: 
       name: ansible 
       state: present 

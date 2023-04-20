@@ -1,6 +1,5 @@
 --- 
-- hosts: all 
-  user: root 
+- hosts: all
   tasks: 
   - name: Ensure ansible user exists 
     user: 

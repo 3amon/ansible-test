@@ -1,7 +1,5 @@
  - name: Playbook to install NGINX
    hosts: all
-   become: yes
-   become_method: sudo
    tasks:
     - name: "Update Repository cache"
       apt:
